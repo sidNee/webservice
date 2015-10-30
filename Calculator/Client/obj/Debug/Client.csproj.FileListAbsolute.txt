@@ -1,0 +1,5 @@
+H:\eisenhut.sidney\Documents\Visual Studio 2015\Projects\Calculator\Client\bin\Debug\Client.exe.config
+H:\eisenhut.sidney\Documents\Visual Studio 2015\Projects\Calculator\Client\bin\Debug\Client.exe
+H:\eisenhut.sidney\Documents\Visual Studio 2015\Projects\Calculator\Client\bin\Debug\Client.pdb
+H:\eisenhut.sidney\Documents\Visual Studio 2015\Projects\Calculator\Client\obj\Debug\Client.exe
+H:\eisenhut.sidney\Documents\Visual Studio 2015\Projects\Calculator\Client\obj\Debug\Client.pdb
