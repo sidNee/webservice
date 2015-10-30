@@ -14,12 +14,16 @@ namespace Client
             Console.WriteLine("Press enter to call the service");
             Console.ReadLine();
 
-            var client = new ServiceReference1.CalculatorClient("netTCPEndpoint");
+            var proxy = new ServiceReference1.CalculatorClient("BasicHttpEndpoint");
+            proxy.ClientCredentials.UserName.UserName = "Simple";
+            proxy.ClientCredentials.UserName.Password = "12345";
+
+
             var arguments = new ServiceReference1.Arguments();
             arguments.Arg1 = 1;
             arguments.Arg2 = 2;
 
-            var result = client.Add(arguments);
+            var result = proxy.Add(arguments);
 
             Console.WriteLine("Result: "+ result.Value);
             Console.WriteLine("Press enter to close the application :)");

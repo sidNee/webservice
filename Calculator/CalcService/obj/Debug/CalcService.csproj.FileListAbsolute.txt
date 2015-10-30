@@ -13,4 +13,3 @@ C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\CalcService\obj\Debu
 C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\CalcService\bin\Debug\CalcService.exe.config
 C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\CalcService\bin\Debug\CalcService.exe
 C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\CalcService\bin\Debug\CalcService.pdb
-C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\CalcService\obj\Debug\CalcService.csprojResolveAssemblyReference.cache

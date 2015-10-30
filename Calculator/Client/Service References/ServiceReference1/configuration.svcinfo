@@ -2,7 +2,7 @@
 <configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
   <behaviors />
   <bindings>
-    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;BasicHttpEndpoint&quot; /&gt;" bindingType="basicHttpBinding" name="BasicHttpEndpoint" />
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;BasicHttpEndpoint&quot;&gt;&lt;security mode=&quot;TransportCredentialOnly&quot;&gt;&lt;transport clientCredentialType=&quot;Basic&quot; /&gt;&lt;/security&gt;&lt;/Data&gt;" bindingType="basicHttpBinding" name="BasicHttpEndpoint" />
     <binding digest="System.ServiceModel.Configuration.NetTcpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;netTCPEndpoint&quot; /&gt;" bindingType="netTcpBinding" name="netTCPEndpoint" />
     <binding digest="System.ServiceModel.Configuration.WSHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;binaryEndpoint&quot;&gt;&lt;security mode=&quot;None&quot; /&gt;&lt;/Data&gt;" bindingType="wsHttpBinding" name="binaryEndpoint" />
   </bindings>
