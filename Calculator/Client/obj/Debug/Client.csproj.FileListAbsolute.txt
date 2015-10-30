@@ -3,3 +3,9 @@ H:\eisenhut.sidney\Documents\Visual Studio 2015\Projects\Calculator\Client\bin\D
 H:\eisenhut.sidney\Documents\Visual Studio 2015\Projects\Calculator\Client\bin\Debug\Client.pdb
 H:\eisenhut.sidney\Documents\Visual Studio 2015\Projects\Calculator\Client\obj\Debug\Client.exe
 H:\eisenhut.sidney\Documents\Visual Studio 2015\Projects\Calculator\Client\obj\Debug\Client.pdb
+C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\Client\bin\Debug\Client.exe.config
+C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\Client\bin\Debug\Client.exe
+C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\Client\bin\Debug\Client.pdb
+C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\Client\obj\Debug\Client.exe
+C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\Client\obj\Debug\Client.pdb
+C:\Users\eisenhut.sidney\Source\Repos\webservice\Calculator\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache

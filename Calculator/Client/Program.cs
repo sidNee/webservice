@@ -14,7 +14,7 @@ namespace Client
             Console.WriteLine("Press enter to call the service");
             Console.ReadLine();
 
-            var client = new ServiceReference1.CalculatorClient();
+            var client = new ServiceReference1.CalculatorClient("netTCPEndpoint");
             var arguments = new ServiceReference1.Arguments();
             arguments.Arg1 = 1;
             arguments.Arg2 = 2;
