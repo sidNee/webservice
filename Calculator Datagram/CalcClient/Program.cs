@@ -10,6 +10,7 @@ namespace CalcClient
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
