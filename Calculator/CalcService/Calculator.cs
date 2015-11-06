@@ -10,7 +10,7 @@ namespace CalcService
         {
             var requestIndentity = ServiceSecurityContext.Current.WindowsIdentity;
             var threadIndentity  = WindowsIdentity.GetCurrent();
-            //TODO Authorisierungsen
+            //TODO Authorisierung
 
             var context= requestIndentity.Impersonate();
 
