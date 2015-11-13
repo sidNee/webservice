@@ -12,12 +12,12 @@ namespace CalcService
 
     public class Calculator : ICalculator
     {
-        public void Add(Arguments args)
+        public void Add(Arguments args,string callbackAddress)
         {
             var result = new Result {Value = args.Arg1 + args.Arg2};
 
             var binding = new NetMsmqBinding(NetMsmqSecurityMode.None);
-            var address = new EndpointAddress("net.msmq://localhost/private/calculatorcallback");
+            var address = new EndpointAddress(callbackAddress);
             var factory = new ChannelFactory<ICalculatorCallbackChannel>(binding,address);
 
             var channel = factory.CreateChannel();

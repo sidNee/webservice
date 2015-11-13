@@ -30,7 +30,7 @@ namespace CalcClient
 
             try
             {
-                channel.Add(Arguments);
+                channel.Add(Arguments, "net.msmq://localhost/private/calculatorcallback");
                 Console.Write("1+2 = ");
                 channel.Dispose();
             }
