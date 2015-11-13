@@ -14,6 +14,12 @@ namespace CalcClient
     {
         static void Main(string[] args)
         {
+            if (args.Length != 1)
+            {
+                Console.WriteLine("Usage: CalculatorClient <callbackAddress>");
+                return;
+            }
+          
             var Arguments = new Arguments();
             Arguments.Arg1 = 1;
             Arguments.Arg2 = 2;
@@ -30,7 +36,7 @@ namespace CalcClient
 
             try
             {
-                channel.Add(Arguments, "net.msmq://localhost/private/calculatorcallback");
+                channel.Add(Arguments,args[0]);
                 Console.Write("1+2 = ");
                 channel.Dispose();
             }
