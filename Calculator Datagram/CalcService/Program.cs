@@ -16,6 +16,8 @@ namespace CalcService
             Console.WriteLine("server started");
             Console.ReadLine();
             host.Close();
+
+            
         }
     }
 }
