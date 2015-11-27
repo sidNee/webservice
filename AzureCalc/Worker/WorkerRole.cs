@@ -5,10 +5,12 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using DataContract;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Diagnostics;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace Worker
 {
@@ -36,11 +38,18 @@ namespace Worker
                 var message = queue.GetMessage();
                 if (message != null)
                 {
-                    
+                    var job = CalcJobSerializer.Deserialize(message.AsString);
+                    var result = job.Value1 + job.Value2;
+                    var jobResult = new JobResult(job,result);
+
+                    var inserOperation =  TableOperation.Insert(jobResult);
+                    table.Execute(inserOperation);
+
+                    queue.DeleteMessage(message); //WICHTIG, sonst kommt sie wieder (die Message)
                 }
                 else
                 {
-                    
+                    Thread.Sleep(100); //0,0071€ pro 10000 Transaktionen
                 }
             }
 

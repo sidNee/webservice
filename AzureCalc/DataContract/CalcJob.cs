@@ -27,7 +27,7 @@ namespace DataContract
                 XmlConvert.ToString(job.Value2));
         }
 
-        public CalcJob Deserialize(string asString)
+        public static CalcJob Deserialize(string asString)
         {
             var parts = asString.Split(',');
             return new CalcJob
