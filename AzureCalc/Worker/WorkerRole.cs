@@ -21,14 +21,31 @@ namespace Worker
         {
             Trace.TraceInformation("Worker is running");
 
-            try
+            var account = CloudStorageAccount.Parse(
+                RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var queueclient = account.CreateCloudQueueClient();
+            var queue = queueclient.GetQueueReference("calc");
+            queue.CreateIfNotExists();
+
+            var tableCient = account.CreateCloudTableClient();
+            var table = tableCient.GetTableReference("calcTable");
+            table.CreateIfNotExists();
+
+            while (true)
             {
-                this.RunAsync(this.cancellationTokenSource.Token).Wait();
+                var message = queue.GetMessage();
+                if (message != null)
+                {
+                    
+                }
+                else
+                {
+                    
+                }
             }
-            finally
-            {
-                this.runCompleteEvent.Set();
-            }
+
+
+            this.runCompleteEvent.Set();
         }
 
         public override bool OnStart()
