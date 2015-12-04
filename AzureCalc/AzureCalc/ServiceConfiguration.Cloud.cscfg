@@ -3,15 +3,15 @@
   <Role name="Frontend">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=secalc;AccountKey=vnWfAMPVruL3B2fJG43WrTn7Ca9Q0B8xqHTKns1/aIVUmmnRqgwgL7bpu0QymQC+pcuxrJPHIlo4r3IbMfe4VA==" />
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=secalc;AccountKey=cTrbVKIymUynVDsvPMGl9Y1XqJwbmWAE8t+vcKE4q9d6mVSZkdkGeV8AGOjqfLhyb0/DNC9ibzbNvs+F+mRx4A==" />
     </ConfigurationSettings>
   </Role>
   <Role name="Worker">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=secalc;AccountKey=vnWfAMPVruL3B2fJG43WrTn7Ca9Q0B8xqHTKns1/aIVUmmnRqgwgL7bpu0QymQC+pcuxrJPHIlo4r3IbMfe4VA==" />
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=secalc;AccountKey=cTrbVKIymUynVDsvPMGl9Y1XqJwbmWAE8t+vcKE4q9d6mVSZkdkGeV8AGOjqfLhyb0/DNC9ibzbNvs+F+mRx4A==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

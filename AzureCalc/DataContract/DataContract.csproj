@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalcJob.cs" />
+    <Compile Include="CalcJobSerializer.cs" />
+    <Compile Include="JobResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

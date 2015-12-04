@@ -56,11 +56,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FrontendContent\" />
+    <Folder Include="Profiles" />
     <Folder Include="WorkerContent\" />
   </ItemGroup>
   <ItemGroup>
     <DiagnosticsConfiguration Include="FrontendContent\diagnostics.wadcfgx" />
     <DiagnosticsConfiguration Include="WorkerContent\diagnostics.wadcfgx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\secalcProduction.azurePubxml" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>

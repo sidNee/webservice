@@ -25,10 +25,13 @@ namespace Worker
 
             var account = CloudStorageAccount.Parse(
                 RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+
+            //Referenz zur Queue
             var queueclient = account.CreateCloudQueueClient();
             var queue = queueclient.GetQueueReference("calc");
             queue.CreateIfNotExists();
 
+            //Referenz zur Tabelle
             var tableCient = account.CreateCloudTableClient();
             var table = tableCient.GetTableReference("calcTable");
             table.CreateIfNotExists();
@@ -38,12 +41,13 @@ namespace Worker
                 var message = queue.GetMessage();
                 if (message != null)
                 {
+                    //DataContract
                     var job = CalcJobSerializer.Deserialize(message.AsString);
                     var result = job.Value1 + job.Value2;
-                    var jobResult = new JobResult(job,result);
+                    var jobResult = new JobResult(job, result);
 
-                    var inserOperation =  TableOperation.Insert(jobResult);
-                    table.Execute(inserOperation);
+                    var insertOperation = TableOperation.Insert(jobResult);
+                    table.Execute(insertOperation);
 
                     queue.DeleteMessage(message); //WICHTIG, sonst kommt sie wieder (die Message)
                 }
@@ -52,8 +56,6 @@ namespace Worker
                     Thread.Sleep(100); //0,0071€ pro 10000 Transaktionen
                 }
             }
-
-
             this.runCompleteEvent.Set();
         }
 

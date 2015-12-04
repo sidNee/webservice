@@ -28,6 +28,7 @@ namespace Frontend
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
 
             var client = account.CreateCloudQueueClient();
+
             var queue = client.GetQueueReference("calc");
             queue.CreateIfNotExists();
 

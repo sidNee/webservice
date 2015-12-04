@@ -15,12 +15,13 @@ namespace Frontend
         protected void Page_Load(object sender, EventArgs e)
         {
             var id = Request.QueryString.Get("id");
-
+            //IF unso
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
             var client = account.CreateCloudTableClient();
             var table = client.GetTableReference("calcTable");
             table.CreateIfNotExists();
 
+            //Afrage(query) auf Tabelle
             var q = from r in table.CreateQuery<JobResult>()
                     where r.PartitionKey == "x" && r.RowKey == id
                     select r;
